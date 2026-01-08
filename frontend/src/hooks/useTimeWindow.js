@@ -58,9 +58,7 @@ export const useTimeWindow = (mealType) => {
 
     checkWindow();
     const interval = setInterval(checkWindow, 60000); // Check every minute
-
     return () => clearInterval(interval);
   }, [mealType]);
-
   return { isInWindow, timeRemaining, windows: TIME_WINDOWS };
 };
